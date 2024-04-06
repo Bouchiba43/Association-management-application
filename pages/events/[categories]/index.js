@@ -7,7 +7,7 @@ const EventsCategoryPage = (props) => {
             <h1>Events in {props.pageName}</h1>
             <div>
                 {props.data.map(event => (
-                    <Link key={event.id}  href={`/events/${event.city}/${event.id}`} passHref >
+                    <Link key={event.id}  href={`/events/${event.city}/${event.id}`} >
                         <Image width={300} height={300} src={event.image} alt={event.title} />
                         <h2>{event.title}</h2>
                         <p>{event.description}</p>
