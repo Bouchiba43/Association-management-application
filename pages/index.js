@@ -14,20 +14,20 @@ export default function Home(props) {
 
       <header className='styles.header'>
         <nav>
-            <Image src="" alt="image" />
-            <Link href='/'>Home</Link>
-            <Link href='/events'>Events</Link>
-            <Link href='/dashboard'>Dashboard</Link>
-            <Link href='/aboutUs'>About Us</Link>
+          <Image src="" alt="image" />
+          <Link href='/'>Home</Link>
+          <Link href='/events'>Events</Link>
+          <Link href='/dashboard'>Dashboard</Link>
+          <Link href='/aboutUs'>About Us</Link>
         </nav>
       </header>
 
       <main className={styles.main}>
-        {props.data.map(event => (<a key={event.id} href={'/events/${event.id'}>
+        {props.data.map(event => (<Link key={event.id} href={'/events/${event.id'}>
           <Image width={300} height={300} src={event.image} alt={event.title} />
           <h2>{event.title}</h2>
           <p>{event.description}</p>
-        </a>))}
+        </Link>))}
       </main>
 
       <footer className={styles.footer}>
@@ -37,15 +37,15 @@ export default function Home(props) {
   )
 }
 
-export async function getServerSideProps(){
-  const {events_categories} = await import ('../data/data.json')
+export async function getServerSideProps() {
+  const { events_categories } = await import('../data/data.json')
   /*const res = await fetch('URL')
   const data = await res.json()
   "Rayen maybe you will need it
   else delete this comment!!!!"*/
-  return{
-      props:{
-          data:events_categories,
-      }
+  return {
+    props: {
+      data: events_categories,
+    }
   }
 }
