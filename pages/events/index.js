@@ -1,21 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import AllEvents from '../../src/components/events/AllEvents';
 
-const EventsPage = (props) => {
-    return (
-        <div>
-            <h1>Event page</h1>
-            <div>
-                {props.data.map(event => (
-                    <Link key={event.id} href={`/events/${event.id}`}>
-                        <Image width={300} height={300} src={event.image} alt={event.title} />
-                        <h2>{event.title}</h2>
-                    </Link>
-                ))}
-            </div>
-        </div>
-    );
-}
+const EventsPage = ({ data }) => {
+    return <AllEvents data={data} />;
+  };
 
 export default EventsPage;
 

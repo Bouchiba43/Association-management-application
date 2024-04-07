@@ -5,7 +5,7 @@ import Link from "next/link";
 export const HomePage = ({ data }) => (
     <div className="home_body">
       {data?.map((event) => (
-        <Link key={event.id} href={`/events/${event.id}`} passHref>
+        <Link key={event.id} href={`/events/${event.id}`} passHref className="cardHomePage">
             <div className="image">
               <Image width={600} height={400} alt={event.title} src={event.image} />
             </div>
