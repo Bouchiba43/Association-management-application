@@ -4,6 +4,8 @@ import Link from 'next/link';
 
 const AllEvents = ({data}) => {
     return (
+    <div className='pageTitle'>
+        <h1>Events in Tunisia</h1>
         <div className='events_page'>
                 {data.map(event => (
                     <Link key={event.id} href={`/events/${event.id}`} className='card'>
@@ -11,6 +13,7 @@ const AllEvents = ({data}) => {
                         <h2>{event.title}</h2>
                     </Link>
                 ))}
+        </div>
         </div>
     );
 };

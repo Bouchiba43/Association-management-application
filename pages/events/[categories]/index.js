@@ -1,21 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import EventList from '../../../src/components/events/EventList';
 
 const EventsCategoryPage = (props) => {
-    return (
-        <div>
-            <h1>Events in {props.pageName}</h1>
-            <div>
-                {props.data.map(event => (
-                    <Link key={event.id}  href={`/events/${event.city}/${event.id}`} >
-                        <Image width={300} height={300} src={event.image} alt={event.title} />
-                        <h2>{event.title}</h2>
-                        <p>{event.description}</p>
-                    </Link>
-                ))}
-            </div>
-        </div>
-    );
+    return <EventList props={props} />;
 }
 
 export default EventsCategoryPage;

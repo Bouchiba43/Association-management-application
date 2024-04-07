@@ -5,7 +5,7 @@ export const Header = () => {
     return (
         <header>
                 <div className="topNav">
-                    <Image src="/images/BouchibaLogo.jpeg" alt="image" width={50} height={50} className="logo" />
+                    <Image src="/images/BouchibaLogo.jpeg" alt="logo" width={50} height={50} className="logo" />
                     <nav>
                         <ul>
                             <li>
@@ -24,7 +24,7 @@ export const Header = () => {
                                 <Link href="/aboutUs">About Us</Link>
                             </li>
                         </ul>
-                            <p className="title">Association Management Application</p>
+                        <h1 className="title">Association Management Application</h1>
                     </nav>
                 </div>
         </header>

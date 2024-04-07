@@ -5,6 +5,7 @@ header
   height: 300px
   background: linear-gradient(305deg, #dbfff3, transparent)
   padding: 15px 30px
+  border-bottom: 5px solid #333
 
   >div
     width: 100%
@@ -12,8 +13,7 @@ header
     margin: auto
     display: flex
     flex-direction: column
-    justify-content: space-between
-  .title
+  .title,h1
     width: 50%
     font-size: 40px
     text-transform: uppercase
@@ -26,10 +26,20 @@ header
       display: flex
       text-decoration: none
       list-style: none
+      align-items: flex-start
       gap: 15px
-      li
+      justify-content: flex-end
+      a
+        text-decoration: none
+        font-size: 18px
         font-weight: 600
-        font-size: 16px
+        text-transform: uppercase
+        &:hover
+          color: #333
+          text-decoration: underline
+        li
+          font-weight: 600
+          font-size: 16px
 
 footer
   background-color: #333
@@ -64,6 +74,57 @@ main
 
 .about_us_list
   display: flex
+  flex-direction: column
+  gap: 30px
+  h1
+    font-size: 40px
+    text-transform: uppercase
+    font-weight: 900
+    border solid
+    margin: 30px
+    margin-bottom: 0
+    justify-content: center
+    align-items: center
+    display: flex
+  h2
+    font-size: 30px
+    text-transform: uppercase
+    font-weight: 900
+  h3
+    font: 24px
+    text-transform: uppercase
+    font-weight: 800
+  p
+    font-size: 18px
+    line-height: 1.5
+    color: #fff
+    text-align: justify
+  .content-aboutUs
+    padding: 25px
+    background: #345
+    border-radius: 10px
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+    margin: 30px
+    border: 1px solid #ccc
+
+.aboutUsList
+  display: flex
+  flex-direction: row
+  gap: 30px
+  justify-content: center
+  align-content: center
+  align-items: center
+
+.pageTitle
+  font-size: 40px
+  text-transform: uppercase
+  font-weight: 900
+  border solid
+  margin: 30px
+  margin-bottom: 0
+  display: flex
+  justify-content: center
+  align-items: center
   flex-direction: column
 
 .events_page
@@ -166,4 +227,27 @@ main
   flex-wrap: wrap
   justify-content: center
 
-  
+.ContainerForEventNews
+  max-width: 1000px
+  margin: auto
+  padding: 20px
+  text-align: center
+
+.imageEventNews
+  border-radius: 15px
+  overflow: hidden
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+
+.titleEventNews
+  font-size: 32px
+  font-weight: bold
+  margin-top: 30px
+  color: #333
+
+.descriptionEventNews
+  font-size: 20px
+  margin-top: 20px
+
+@media (max-width: 768px)
+  .imageEventNews
+    width: 100%

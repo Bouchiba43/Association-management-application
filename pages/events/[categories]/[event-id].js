@@ -1,12 +1,9 @@
 import Image from 'next/image';
+import Event from '../../../src/components/events/Event';
 
 const EventPage = (props) => {
     return (
-        <div>
-            <Image width={1000} height={500} src={props.data[0].image} alt={props.data[0].title} />
-            <h2>{props.data[0].title}</h2>
-            <p>{props.data[0].description}</p>
-        </div>
+        <Event data={props.data} />
     );
 }
 
