@@ -40,6 +40,7 @@ const Event = (props) => {
         }
         catch (error) {
             console.error('Failed to subscribe to event', error);
+            setMessage('Failed to subscribe to event,You are already registered!');
         }
     }
     return (

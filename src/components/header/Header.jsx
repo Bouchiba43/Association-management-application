@@ -15,10 +15,7 @@ export const Header = () => {
                             <ul>
                                 <li>
                                     <Link href="/">Home</Link>
-                                </li>
-                                <li>
-                                    <Link href="/admin">Dashboard</Link>
-                                </li>
+                                </li>                              
                                 <li>
                                     <Link href="/events">Events</Link>
                                 </li>
@@ -26,7 +23,16 @@ export const Header = () => {
                                     <Link href="/news">News</Link>
                                 </li>
                                 <li>
+                                    <Link href="/admin">Dashboard</Link>
+                                </li>
+                                <li>
                                     <Link href="/aboutUs">About Us</Link>
+                                </li>
+                                <li>
+                                    <Link href="/login">Login</Link>
+                                </li>
+                                <li>
+                                    <Link href="/signup">Register</Link>
                                 </li>
                             </ul>
                             <h1 className="title">Association Management Application</h1>

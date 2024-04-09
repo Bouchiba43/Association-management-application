@@ -1,7 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
 
-export default function AdminLayout({ children }) {
+export default function Layout({ children }) {
   return (
     <div>
       <Header />
