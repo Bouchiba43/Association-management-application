@@ -1,11 +1,24 @@
 import Link from "next/link";
 
 const SignupPage = () => {
+
+    const handleSubmit = async (e: any) => {
+        e.preventDefault();
+        const fullName = e.target[0].value;
+        const userName = e.target[1].value;
+        const email = e.target[2].value;
+        const password = e.target[3].value;
+        const confirmPassword = e.target[4].value;
+        const role = "user";
+        const date = new Date().toISOString();
+
+    }
+
     return (
         <div className="signup-container">
             <div className="signup-form">
                 <h1 className="signup-heading">Register</h1>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <input
                         type="text"
                         className="input-field"
